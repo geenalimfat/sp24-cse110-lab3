@@ -1,39 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-      h1 {
-          color: rgb(3, 3, 15); /*Color Name*/
-          background-color: hsl(100, 50%, 50%); /* h,s,l  */
-          border-color: rgb(255, 0, 0); /* RGB values */
-      }
-
-      /* Fallback */
-      :root {
-          --header-color: #007bff; /* hex color */
-      }
-
-      h1, h2, h3, h4 {
-          color: var(--header-color, rgb(5, 27, 85)); /* Use variable with fallback */
-      }
-
-      h2 {
-        color: color(display-p3 1 0 0); /* Wider Gamut Color */
-      }
-
-      h3 {
-        background-color: color-mix(blend red 30%, blue 35%);
-      }
-
-      .box {
-        background-color: #567895;
-      }
-
-      span {
-        background-color: rgb(255 255 255 / 50%);
-      }
-
-  </style>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="Meeting Minutes template for teams">
     <title>Meeting Minutes</title>
@@ -41,200 +8,273 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-  </head>
-  <body>
-    <header>
-        <h1>Meeting Minutes</h1> 
-    </header>
+    <style>
+        h1 {
+            color: rgb(3, 3, 15); /*Color Name*/
+            background-color: hsl(100, 50%, 50%); /* h,s,l  */
+            border-color: rgb(255, 0, 0); /* RGB values */
+            margin-top: 2rem; /* Long margin + 1 relative unit */
+            margin-bottom: 1rem; 
+            margin-left: 2rem;
+            margin-right: 1rem; 
+            padding-top: 20px; /* long padding + 1 absolute unit*/
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 10px;
+            border-style: solid; /* Border style */
+            border-color: blue; /* Border color */
+            border-width: 2mm; /* Border width + 2nd absolute unit*/
+            border-radius: 3mm; /* Border radius */
+        }
 
-    <main>
-        <section>
-            <h2>Meeting: Project Ideas First Brainstorm</h2>
-            
-            <h3>Topic: Brainstorming</h3>
-            <h3>Date: April 15, 2024</h3>
-            
-            <div>
-                <h3>Attendance:</h3>
-                <h4>Present: </h4>
-                <ul>
-                    <li>Geena Limfat</li>
-                    <li>Nicole Cheng</li>
-                    <li>Katelyn La</li>
-                </ul>
-    
-                <h4>Absent</h4>
-                <ul>
-                    <li><i>Katarina Weisinger</i> 
-                        <ul>
-                            <li>Excused</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            
-            <h3>Agenda:</h3>
-            <ol>
-                <li>Go over Unfinished Business</li>
-                <li>Brainstorm Ideas for Project</li>
-                <li>Create wireframe and goals for selected idea</li>
-            </ol>
-            
-            <h3>Unfinished Business from Last Meeting:</h3>
-            <p>Get to know the group</p>
-            
-            <h3>New Business:</h3>
-            New ideas: 
-                <ul>
-                    <li>Funny Animal Videos </li>
-                    <li>Sports Updates</li>
-                    <li>Food Blog</li>
-                </ul>
-                Selected idea:<br>
-                 <strong>Funny Animal Videos</strong> <br>
-                Everyone likes funny animal videos. Notable favorites include <span>cats, dogs, monkeys, seals, etc,. </span>
-                Personal favorite: <b>dog</b>. Potentially add a comical animal poem as group slogan.
-                Potentially add an animal riddle in between slides.
-                Groupmates <em>stressed</em> that snacks should be brought to meetings. Noted. 
+        h2 {
+            color: rgb(1, 51, 26);
+            margin: auto; /* Auto margin */
+            padding: 20px 10px 20px 10px; /* Short padding */
+            border-style: solid; /* Border style */
+            border-color: green; /* Border color */
+            border-width: 0.5pc; /* Border width + 3rd absolute unit */
+            border-radius: 0.72pc; /* Border radius */
+        }
 
-            <h3>Next Time: </h3>
-            <p>Finalize wireframe. Find more funny videos/pictures. Bring snacks.</p>
-        </section>
-            
-        
-        <hr>
-        <section>
+        /* Fallback */
+        :root {
+            --header-color: #007bff; /* hex color */
+        }
 
-            <h3>Components to add (confirmed):</h3>
-            <h3>Team Mascot</h3>
-            <img src="fatcat.jpeg" alt="Team Mascot">
-            
-            <h3>Seal Noises:</h3>
-            <audio controls src="sealbark.mp3"></audio>
-            
-            <h3>Video Recording:</h3>
-            <video controls>
-                <source src="elephant.mp4" type="video/mp4">
-            </video>
-        </section>
+        h3, h4 {
+            color: var(--header-color, rgb(5, 27, 85)); 
+            /* Use variable with fallback */
+        }
 
+        h4 {
+            color: color(display-p3 1 0 0); /* Wider Gamut Color */
+        }
 
-        <h3>Potential Adds:</h3>
-        <section>
-            Inspiration video: 
-                <nav>
+        h3 {
+            background-color: color-mix(blend red 30%, blue 35%); /* Wider Gamut Color */
+            color: rgb(31, 1, 51);
+            margin: 20px 10px 20px 10px ; /* Short Margin */
+            padding: 20px 10px 20px 10px ;
+            border-style: solid;
+            border-color: purple;
+            border-width: 0.5vw; /* 2nd relative unit */
+            border-radius: 0.1vw;
+        }
+
+        .box {
+            background-color: #567895;
+            padding-top: 30px; /* Long padding-top */
+            padding-bottom: 30px; /* Long padding-bottom */
+            padding-left: 15px; /* Long padding-left */
+            padding-right: 15px; /* Long padding-right */
+            padding: 30px 15px 30px 15px; /* Short padding */
+        }
+
+        span {
+            background-color: rgb(255 255 255 / 50%);
+        }
+
+        body {
+            font-size: 1.2em; /* Relative font size + 3rd relative unit*/
+            line-height: 1.5em; /* Relative line height */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Meeting Minutes</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Meeting: Project Ideas First Brainstorm</h2>
+
+        <h3>Topic: Brainstorming</h3>
+        <h3>Date: April 15, 2024</h3>
+
+        <div>
+            <h3>Attendance:</h3>
+            <h4>Present: </h4>
+            <ul>
+                <li>Geena Limfat</li>
+                <li>Nicole Cheng</li>
+                <li>Katelyn La</li>
+            </ul>
+
+            <h4>Absent</h4>
+            <ul>
+                <li><i>Katarina Weisinger</i>
                     <ul>
-                        <li><a href="https://www.youtube.com/watch?v=v3HlwwJG85c">Peacock Spider Dance</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=q3uXXh1sHcI">Baby Penguin</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=CmrjSe01LMA">Baby Seal</a></li>
+                        <li>Excused</li>
                     </ul>
-                </nav>
-        </section>
+                </li>
+            </ul>
+        </div>
 
-        <section>
-            <p>
-                Potential Poetic slogan: <br>
-                In a whimsical world where critters roam free,<br>
-                the mischievous monkey swings from tree to tree,<br>
-                juggling coconuts with a grin so wide,<br>
-                while the bubbly otter slides down the riverside.<br>
-                The seagull above lets out a hearty caw, as it swoops down low,<br>
-                leaving beachgoers in awe.<br>
-                And amidst it all,<br>
-                the sloth and bear play their part,<br>
-                with lazy grace and clumsy art.<br>
-                Together they dance,<br>
-                bringing joy and glee,<br>
-                in this comical circus of animals, you see!
-            </p>
-        </section>
+        <h3>Agenda:</h3>
+        <ol>
+            <li>Go over Unfinished Business</li>
+            <li>Brainstorm Ideas for Project</li>
+            <li>Create wireframe and goals for selected idea</li>
+        </ol>
 
-        <section>
-            Animal riddle: <br>
-            <details>
-                <summary>I'm not a fish, but I'm quite the catch,
-                    With my slimy skin and a wobbly match.
-                    I slurp and burp, a real gourmet treat,
-                    But beware, my kiss might leave you beat.
-                    What am I?</summary>
-                    <b>Frog</b>
-            </details>
-        </section>
-        
-        <hr>
-        
-        <h2>Additional Feedback for next meeting</h2>
-        <div>
-            <p>Please enter your name and email: </p>
-            <form method="get" class="form-example">
-                <label for="name">Enter your name: </label>
-                <input type="text" name="name" id="name" required /> <br>
-                
-                <label for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required />
-            </form>
-        </div>
-        
-        <div class = "box"> 
-            <form>
-                <fieldset>
-                    <legend>Choose your favorite animal + add your birthday</legend>
-                    
-                    <input type="radio" id="dog" name="animal" value="D" />
-                    <label for="dog">Dog</label><br />
-                    
-                    <input type="checkbox" id="cat" name="animal" value="C" />
-                    <label for="cat">Cat</label><br />
-                    
-                    <input type="text" id="other" name="animal"/>
-                    <label for="other">Other</label><br/>
-                    
-                    <input type="date" id="bday"/>
-                    <label for="bday">Birthday</label>
-                </fieldset>
-            </form>
-        </div>
-        
-        <div>
-            <label for="feedback">Give us feedback from out first meeting!</label><br>
-            
-            <textarea id="feedback" name="feedback" rows="5" cols="33">Today's first meeting was...
-            </textarea>
-        </div>
-        
-        <div>
-            <label for="team-name-choices">Choose a Team Name:</label>
-            <input list="team-name-potential" id="team-name-choices" name="team-name-choices" />
-            
-            <datalist id="team-name-potential">
-                <option value="Barbaric Bunnies"></option>
-                <option value="Chocolate Cows"></option>
-                <option value="Greedy Giraffes"></option>
-                <option value="Sneaky Snakes"></option>
-                <option value="Fascinating Fish"></option>
-            </datalist>
-        </div>
-        
-        <div>
-            <label for="color-select">Choose a team color:</label>
-            
-            <select name="colors" id="color-select">
-                <option value="">--Please choose an option--</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="pink">Pink</option>
-                <option value="yellow">Yellow</option>
-                <option value="purple">Purple</option>
-                <option value="red">Red</option>
-            </select>
-        </div>
-        
-        <div>
-            <button class="for fun " type="button">Press me for fun</button>
-        </div>   
-    </main>
-        <footer>
-            <p>© 2024 Geenie</p>
-    </footer>
-  </body>
+        <h3>Unfinished Business from Last Meeting:</h3>
+        <p>Get to know the group</p>
+
+        <h3>New Business:</h3>
+        New ideas:
+        <ul>
+            <li>Funny Animal Videos </li>
+            <li>Sports Updates</li>
+            <li>Food Blog</li>
+        </ul>
+        Selected idea:<br>
+        <strong>Funny Animal Videos</strong> <br>
+        Everyone likes funny animal videos. Notable favorites include <span>cats, dogs, monkeys, seals, etc,. </span>
+        Personal favorite: <b>dog</b>. Potentially add a comical animal poem as group slogan.
+        Potentially add an animal riddle in between slides.
+        Groupmates <em>stressed</em> that snacks should be brought to meetings. Noted.
+
+        <h3>Next Time: </h3>
+        <p>Finalize wireframe. Find more funny videos/pictures. Bring snacks.</p>
+    </section>
+
+
+    <hr>
+    <section>
+
+        <h2>Components to add (confirmed):</h2>
+        <h3>Team Mascot</h3>
+        <img src="fatcat.jpeg" alt="Team Mascot">
+
+        <h3>Seal Noises:</h3>
+        <audio controls src="sealbark.mp3"></audio>
+
+        <h3>Video Recording:</h3>
+        <video controls>
+            <source src="elephant.mp4" type="video/mp4">
+        </video>
+    </section>
+
+
+    <h3>Potential Adds:</h3>
+    <section>
+        Inspiration video:
+        <nav>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=v3HlwwJG85c">Peacock Spider Dance</a></li>
+                <li><a href="https://www.youtube.com/watch?v=q3uXXh1sHcI">Baby Penguin</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CmrjSe01LMA">Baby Seal</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <p>
+            Potential Poetic slogan: <br>
+            In a whimsical world where critters roam free,<br>
+            the mischievous monkey swings from tree to tree,<br>
+            juggling coconuts with a grin so wide,<br>
+            while the bubbly otter slides down the riverside.<br>
+            The seagull above lets out a hearty caw, as it swoops down low,<br>
+            leaving beachgoers in awe.<br>
+            And amidst it all,<br>
+            the sloth and bear play their part,<br>
+            with lazy grace and clumsy art.<br>
+            Together they dance,<br>
+            bringing joy and glee,<br>
+            in this comical circus of animals, you see!
+        </p>
+    </section>
+
+    <section>
+        Animal riddle: <br>
+        <details>
+            <summary>I'm not a fish, but I'm quite the catch,
+                With my slimy skin and a wobbly match.
+                I slurp and burp, a real gourmet treat,
+                But beware, my kiss might leave you beat.
+                What am I?</summary>
+            <b>Frog</b>
+        </details>
+    </section>
+
+    <hr>
+
+    <h2>Additional Feedback for next meeting</h2>
+    <div>
+        <p>Please enter your name and email: </p>
+        <form method="get" class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required /> <br>
+
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required />
+        </form>
+    </div>
+
+    <div class="box">
+        <form>
+            <fieldset>
+                <legend>Choose your favorite animal + add your birthday</legend>
+
+                <input type="radio" id="dog" name="animal" value="D" />
+                <label for="dog">Dog</label><br />
+
+                <input type="checkbox" id="cat" name="animal" value="C" />
+                <label for="cat">Cat</label><br />
+
+                <input type="text" id="other" name="animal"/>
+                <label for="other">Other</label><br/>
+
+                <input type="date" id="bday"/>
+                <label for="bday">Birthday</label>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <label for="feedback">Give us feedback from out first meeting!</label><br>
+
+        <textarea id="feedback" name="feedback" rows="5" cols="33">Today's first meeting was...
+        </textarea>
+    </div>
+
+    <div>
+        <label for="team-name-choices">Choose a Team Name:</label>
+        <input list="team-name-potential" id="team-name-choices" name="team-name-choices" />
+
+        <datalist id="team-name-potential">
+            <option value="Barbaric Bunnies"></option>
+            <option value="Chocolate Cows"></option>
+            <option value="Greedy Giraffes"></option>
+            <option value="Sneaky Snakes"></option>
+            <option value="Fascinating Fish"></option>
+        </datalist>
+    </div>
+
+    <div>
+        <label for="color-select">Choose a team color:</label>
+
+        <select name="colors" id="color-select">
+            <option value="">--Please choose an option--</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            <option value="red">Red</option>
+        </select>
+    </div>
+
+    <div>
+        <button class="for fun " type="button">Press me for fun</button>
+    </div>
+</main>
+<footer>
+    <p>© 2024 Geenie</p>
+</footer>
+</body>
 </html>
