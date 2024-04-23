@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-Link for [part 1](https://geenalimfat.github.io/Lab2_Starter/) of the lab: 
+# Lab 3 
+Link for [Lab 3](https://geenalimfat.github.io/sp24-cse110-lab3/) 
