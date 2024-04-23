@@ -13,16 +13,18 @@
             color: rgb(3, 3, 15); /*Color Name*/
             background-color: hsl(100, 50%, 50%); /* h,s,l  */
             border-color: rgb(255, 0, 0); /* RGB values */
-            margin-top: 20px; /* Long margin-top */
-            margin-bottom: 20px; /* Long margin-bottom */
-            margin-left: 10px; /* Long margin-left */
-            margin-right: 10px; /* Long margin-right */
-            margin: 20px 10px 20px 10px; /* Short margin */
-            padding: 20px 10px 20px 10px; /* Short padding */
+            margin-top: 2rem; /* Long margin + 1 relative unit */
+            margin-bottom: 1rem; 
+            margin-left: 2rem;
+            margin-right: 1rem; 
+            padding-top: 20px; /* long padding + 1 absolute unit*/
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 10px;
             border-style: solid; /* Border style */
             border-color: blue; /* Border color */
-            border-width: 2px; /* Border width */
-            border-radius: 10px; /* Border radius */
+            border-width: 2mm; /* Border width + 2nd absolute unit*/
+            border-radius: 3mm; /* Border radius */
         }
 
         h2 {
@@ -31,26 +33,35 @@
             padding: 20px 10px 20px 10px; /* Short padding */
             border-style: solid; /* Border style */
             border-color: green; /* Border color */
-            border-width: 1px; /* Border width */
-            border-radius: 8px; /* Border radius */
+            border-width: 0.5pc; /* Border width + 3rd absolute unit */
+            border-radius: 0.72pc; /* Border radius */
         }
 
+        h3 {
+            background-color: color-mix(blend red 30%, blue 35%); /* Wider Gamut Color */
+            color: rgb(31, 1, 51);
+            margin: 20px 10px 20px 10px ; /* Short Margin */
+            padding: 20px 10px 20px 10px ;
+            border-style: solid;
+            border-color: purple;
+            border-width: 0.5vw; /* 2nd relative unit */
+            border-radius: 0.1vw;
+        }
+        
         /* Fallback */
         :root {
             --header-color: #007bff; /* hex color */
         }
 
-        /* h1, h2, h3, h4 { */
-            /* color: var(--header-color, rgb(5, 27, 85)); Use variable with fallback */
-        /* } */
+        h3, h4 {
+            color: var(--header-color, rgb(5, 27, 85)); 
+            /* Use variable with fallback */
+        }
 
         h4 {
             color: color(display-p3 1 0 0); /* Wider Gamut Color */
         }
 
-        h3 {
-            background-color: color-mix(blend red 30%, blue 35%);
-        }
 
         .box {
             background-color: #567895;
@@ -64,6 +75,12 @@
         span {
             background-color: rgb(255 255 255 / 50%);
         }
+
+        body {
+            font-size: 1.2em; /* Relative font size + 3rd relative unit*/
+            line-height: 1.5em; /* Relative line height */
+        }
+
     </style>
 </head>
 <body>
@@ -129,7 +146,7 @@
     <hr>
     <section>
 
-        <h3>Components to add (confirmed):</h3>
+        <h2>Components to add (confirmed):</h2>
         <h3>Team Mascot</h3>
         <img src="fatcat.jpeg" alt="Team Mascot">
 
