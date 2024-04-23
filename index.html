@@ -1,5 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+      h1 {
+          color: rgb(3, 3, 15); /*Color Name*/
+          background-color: hsl(100, 50%, 50%); /* h,s,l  */
+          border-color: rgb(255, 0, 0); /* RGB values */
+      }
+
+      /* Fallback */
+      :root {
+          --header-color: #007bff; /* hex color */
+      }
+
+      h1, h2, h3, h4 {
+          color: var(--header-color, rgb(5, 27, 85)); /* Use variable with fallback */
+      }
+
+      h2 {
+        color: color(display-p3 1 0 0); /* Wider Gamut Color */
+      }
+
+      h3 {
+        background-color: color-mix(blend red 30%, blue 35%);
+      }
+
+      .box {
+        background-color: #567895;
+      }
+
+      span {
+        background-color: rgb(255 255 255 / 50%);
+      }
+
+  </style>
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Meeting Minutes template for teams">
@@ -142,7 +175,7 @@
             </form>
         </div>
         
-        <div> 
+        <div class = "box"> 
             <form>
                 <fieldset>
                     <legend>Choose your favorite animal + add your birthday</legend>
