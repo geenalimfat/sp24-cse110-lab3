@@ -110,17 +110,26 @@
             position: relative; /* Relative positioning */
         }
 
-        footer {
-            position: fixed; /* Fixed positioning */
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            font-size: 12px; /* Adjust the font size as needed */
-            height: 30px;
+        .button-container {
+            position: fixed;
+            bottom: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            z-index: 999; /* Ensure it's above other content */
         }
 
+        /* Pseudo-classes */
+        a:link {
+            color: blue; /* Default color for links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        a:hover {
+            color: red; /* Change color on hover */
+        }
+
+        a:active {
+            color: green; /* Change color on click */
+        }
     </style>
 </head>
 <body>
@@ -310,7 +319,7 @@
         </select>
     </div>
 
-    <div>
+    <div class="button-container">
         <button class="for fun " type="button">Press me for fun</button>
     </div>
 </main>
