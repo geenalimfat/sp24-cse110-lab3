@@ -8,7 +8,33 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
     <style>
+        .source-sans-3 {
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700; /* Replace <weight> with the desired font weight */
+            font-style: normal;
+        }
+    </style>
+    <style>
+     
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
         h1 {
             color: rgb(3, 3, 15); /*Color Name*/
             text-align: center;
@@ -35,7 +61,7 @@
             padding: 20px 10px 20px 10px; /* Short padding */
             border-style: solid; /* Border style */
             border-color: green; /* Border color */
-            border-width: 0.5pc; /* Border width + 3rd absolute unit */
+            border-width: 0.2pc; /* Border width + 3rd absolute unit */
             border-radius: 0.72pc; /* Border radius */
             
         }
@@ -130,30 +156,59 @@
         a:active {
             color: green; /* Change color on click */
         }
+
+        @media screen and (max-width: 768px) {
+            main {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            section {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns for smaller screens */
+            }
+
+            h1 {
+                width: 100%; /* Make the heading full width on smaller screens */
+                margin: 0; /* Remove margins to maximize space */
+            }
+
+            h2 {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            h3 {
+                margin: 10px; /* Adjust margin for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* Adjust font size for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
 <header>
-    <h1>Meeting Minutes</h1>
+    <h1 class="source-sans-3">Meeting Minutes</h1>
 </header>
 
 <main>
     <section>
-        <h2>Meeting: Project Ideas First Brainstorm</h2>
+        <h2 class="source-sans-3">Meeting: Project Ideas First Brainstorm</h2>
 
-        <h3>Topic: Brainstorming</h3>
-        <h3>Date: April 15, 2024</h3>
+        <h3 class="source-sans-3">Topic: Brainstorming</h3>
+        <h3 class="source-sans-3">Date: April 15, 2024</h3>
 
         <div>
-            <h3>Attendance:</h3>
-            <h4>Present: </h4>
+            <h3 class="source-sans-3">Attendance:</h3>
+            <h4 class="source-sans-3">Present: </h4>
             <ul>
                 <li>Geena Limfat</li>
                 <li>Nicole Cheng</li>
                 <li>Katelyn La</li>
             </ul>
 
-            <h4>Absent</h4>
+            <h4 class="source-sans-3">Absent</h4>
             <ul>
                 <li><i>Katarina Weisinger</i>
                     <ul>
@@ -173,43 +228,46 @@
         <h3>Unfinished Business from Last Meeting:</h3>
         <p>Get to know the group</p>
 
-        <h3>New Business:</h3>
-        New ideas:
-        <ul>
-            <li>Funny Animal Videos </li>
-            <li>Sports Updates</li>
-            <li>Food Blog</li>
-        </ul>
-        Selected idea:<br>
-        <strong>Funny Animal Videos</strong> <br>
-        Everyone likes funny animal videos. Notable favorites include <span>cats, dogs, monkeys, seals, etc,. </span>
-        Personal favorite: <b>dog</b>. Potentially add a comical animal poem as group slogan.
-        Potentially add an animal riddle in between slides.
-        Groupmates <em>stressed</em> that snacks should be brought to meetings. Noted.
-
-        <h3>Next Time: </h3>
-        <p>Finalize wireframe. Find more funny videos/pictures. Bring snacks.</p>
-    </section>
-
+   
+            <div>
+                <h3 class="source-sans-3">New Business:</h3>
+                <ul>
+                    <li>Funny Animal Videos</li>
+                    <li>Sports Updates</li>
+                    <li>Food Blog</li>
+                </ul>
+                <p>Selected idea:<br>
+                    <strong>Funny Animal Videos</strong><br>
+                    Everyone likes funny animal videos. Notable favorites include <span>cats, dogs, monkeys, seals, etc,. </span>
+                    Personal favorite: <b>dog</b>. Potentially add a comical animal poem as group slogan.
+                    Potentially add an animal riddle in between slides.
+                    Groupmates <em>stressed</em> that snacks should be brought to meetings. Noted.
+                </p>
+            </div>
+            <div>
+                <h3 class="source-sans-3">Next Time:</h3>
+                <p>Finalize wireframe. Find more funny videos/pictures. Bring snacks.</p>
+            </div>
+        </section>
 
     <hr>
     <section>
 
-        <h2>Components to add (confirmed):</h2>
-        <h3>Team Mascot</h3>
+        <h2 class="source-sans-3">Components to add (confirmed):</h2>
+        <h3 class="source-sans-3">Team Mascot</h3>
         <img src="fatcat.jpeg" alt="Team Mascot">
 
-        <h3>Seal Noises:</h3>
+        <h3 class="source-sans-3">Seal Noises:</h3>
         <audio controls src="sealbark.mp3"></audio>
 
-        <h3>Video Recording:</h3>
+        <h3 class="source-sans-3">Video Recording:</h3>
         <video controls>
             <source src="elephant.mp4" type="video/mp4">
         </video>
     </section>
 
 
-    <h3>Potential Adds:</h3>
+    <h3 class="source-sans-3">Potential Adds:</h3>
     <section>
         Inspiration video:
         <nav>
@@ -253,7 +311,7 @@
 
     <hr>
 
-    <h2>Additional Feedback for next meeting</h2>
+    <h2 class="source-sans-3">Additional Feedback for next meeting</h2>
     <div class = "inline-block">
         <p>Please enter your name and email: </p>
         <form method="get" class="form-example">
