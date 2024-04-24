@@ -65,6 +65,20 @@
             color: color(display-p3 1 0 0); /* Wider Gamut Color */
         }
 
+        .inline-block {
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            display:inline;
+            background-color: aliceblue;
+            padding: 2px;
+            margin: bottom 4px;
+        }
+
 
         .box {
             background-color: #567895;
@@ -216,7 +230,7 @@
     <hr>
 
     <h2>Additional Feedback for next meeting</h2>
-    <div>
+    <div class = "inline-block">
         <p>Please enter your name and email: </p>
         <form method="get" class="form-example">
             <label for="name">Enter your name: </label>
@@ -247,7 +261,7 @@
         </form>
     </div>
 
-    <div>
+    <div class="inline">
         <label for="feedback">Give us feedback from out first meeting!</label><br>
 
         <textarea id="feedback" name="feedback" rows="5" cols="33">Today's first meeting was...
