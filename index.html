@@ -11,8 +11,8 @@
     <style>
         h1 {
             color: rgb(3, 3, 15); /*Color Name*/
-            background-color: hsl(100, 50%, 50%); /* h,s,l  */
-            border-color: rgb(255, 0, 0); /* RGB values */
+            text-align: center;
+            background-color: hsl(100, 26%, 61%); /* h,s,l  */
             margin-top: 2rem; /* Long margin + 1 relative unit */
             margin-bottom: 1rem; 
             margin-left: 2rem;
@@ -22,11 +22,13 @@
             padding-left: 20px;
             padding-right: 10px;
             border-style: solid; /* Border style */
-            border-color: blue; /* Border color */
+            border-color: rgb(7,67,47); /* Border color */
             border-width: 2mm; /* Border width + 2nd absolute unit*/
             border-radius: 3mm; /* Border radius */
+            width: 500px; /* sizing */
+            height: 30px;
         }
-
+        
         h2 {
             color: rgb(1, 51, 26);
             margin: auto; /* Auto margin */
@@ -35,6 +37,7 @@
             border-color: green; /* Border color */
             border-width: 0.5pc; /* Border width + 3rd absolute unit */
             border-radius: 0.72pc; /* Border radius */
+            
         }
 
         h3 {
@@ -50,7 +53,7 @@
         
         /* Fallback */
         :root {
-            --header-color: #007bff; /* hex color */
+            --header-color: #32055c; /* hex color */
         }
 
         h3, h4 {
@@ -70,6 +73,8 @@
             padding-left: 15px; /* Long padding-left */
             padding-right: 15px; /* Long padding-right */
             padding: 30px 15px 30px 15px; /* Short padding */
+            max-width: fit-content;
+            max-height: fit-content;
         }
 
         span {
@@ -79,6 +84,12 @@
         body {
             font-size: 1.2em; /* Relative font size + 3rd relative unit*/
             line-height: 1.5em; /* Relative line height */
+        }
+
+        p.a{
+            text-align: center;
+            color: cornflowerblue;
+            text-decoration:underline ;
         }
 
     </style>
@@ -173,7 +184,7 @@
     </section>
 
     <section>
-        <p>
+        <p class = "a">
             Potential Poetic slogan: <br>
             In a whimsical world where critters roam free,<br>
             the mischievous monkey swings from tree to tree,<br>
