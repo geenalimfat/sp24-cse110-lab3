@@ -5,38 +5,38 @@
 ### Class: CSE 110 
 ### Table of Contents:
 
-## Monday: 
+## Monday:  (Lab 1)
 | Name    | Priorities | Progress   | Problems  |
 | ------- | -------    | -------    |   ------- | 
-| Geena   | Working    | Trying     |   Sleepy  |
-|  ...    | ...        | ...        |       ... |
-| ...     | ...        | ...        |        ...|
+| Geena   | Lead meeting    | Trying     |   Sleepy  |
+|  Katelyn    | Take Notes        | Success        |       Distracted |
+| Nicole     | Design app        | Made home screen        |        Hungry 
 
-## Tuesday: 
+## Tuesday: (Lab 2)
 | Name    | Priorities | Progress   | Problems  |
 | ------- | -------    | -------    |   ------- | 
-| Geena   | Getting up | Standing   |Bed Comfy  |
-|  ...    | ...        | ...        |       ... |
+| Geena   | Finishing Lab 1 | 70% done   | CSS confuses her  |
+|  Nicole    | Finding Teammates        | No Progress        |       Teammates are missing |
 | ...     | ...        | ...        |        ...|
 
 ## Wednesday: 
 | Name    | Priorities | Progress   | Problems  |
 | ------- | -------    | -------    |   ------- | 
-| Geena   | Cooking    | Success    |   Hangry  |
+| ...   | ...    | ...    |   ...  |
 |  ...    | ...        | ...        |       ... |
 | ...     | ...        | ...        |        ...|
 
 ## Thuesday: 
 | Name    | Priorities | Progress   | Problems  |
 | ------- | -------    | -------    |   ------- | 
-| Geena   | Working out| Trying     |   Sore    |
+| ...   | ...| ...     |   ...    |
 |  ...    | ...        | ...        |       ... |
 | ...     | ...        | ...        |        ...|
 
 ## Friday: 
 | Name    | Priorities | Progress   | Problems  |
 | ------- | -------    | -------    |   ------- | 
-| Geena   | Relaxing   | Easily done|   none    |
+| ...   | ...   | ...|   ...    |
 |  ...    | ...        | ...        |       ... |
 | ...     | ...        | ...        |        ...|
 

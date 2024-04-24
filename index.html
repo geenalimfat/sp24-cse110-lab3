@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Meeting Minutes template for teams">
     <title>Meeting Minutes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -12,230 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-
     <style>
-        .source-sans-3 { /* Class Selector*/
-            font-family: "Source Sans 3", sans-serif;
-            font-weight: 700; /* Replace <weight> with the desired font weight */
-            font-style: normal;
-        }
-    </style>
-    <style>
-
-        /* Element Selector */
-     
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-        h1 {
-            color: rgb(3, 3, 15); /*Color Name*/
-            text-align: center;
-            background-color: hsl(100, 26%, 61%); /* h,s,l  */
-            margin-top: 2rem; /* Long margin + 1 relative unit */
-            margin-bottom: 1rem; 
-            margin-left: 2rem;
-            margin-right: 1rem; 
-            padding-top: 20px; /* long padding + 1 absolute unit*/
-            padding-bottom: 10px;
-            padding-left: 20px;
-            padding-right: 10px;
-            border-style: solid; /* Border style */
-            border-color: rgb(7,67,47); /* Border color */
-            border-width: 2mm; /* Border width + 2nd absolute unit*/
-            border-radius: 3mm; /* Border radius */
-            width: 500px; /* sizing */
-            height: 30px;
-        }
-        
-        h2 {
-            color: rgb(1, 51, 26);
-            margin: auto; /* Auto margin */
-            padding: 20px 10px 20px 10px; /* Short padding */
-            border-style: solid; /* Border style */
-            border-color: green; /* Border color */
-            border-width: 0.2pc; /* Border width + 3rd absolute unit */
-            border-radius: 0.72pc; /* Border radius */
-            
-        }
-
-        /* Descendant combinator */
-        main h2 {
-            color: darkolivegreen;
-        }
-
-        h3 {
-            background-color: color-mix(blend red 30%, blue 35%); /* Wider Gamut Color */
-            color: rgb(31, 1, 51);
-            margin: 20px 10px 20px 10px ; /* Short Margin */
-            padding: 20px 10px 20px 10px ;
-            border-style: solid;
-            border-color: purple;
-            border-width: 0.5vw; /* 2nd relative unit */
-            border-radius: 0.1vw;
-        }
-
-         /* Attribute Selector */
-         input[type="text"] {
-            border: 2px solid blue;
-            padding: 5px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        /* Universal Selector */
-        * {
-            font-weight: normal;
-            color: black;
-        }
-
-        /* ID selector */
-        #bold-red {
-            font-weight: bold;
-             color: red;
-        }
-        
-        /* Fallback */
-        :root {
-            --header-color: #32055c; /* hex color */
-        }
-
-        /* Selector List */
-        h3, h4 {
-            color: var(--header-color, rgb(5, 27, 85)); 
-            /* Use variable with fallback */
-        }
-
-        h4 {
-            color: color(display-p3 1 0 0); /* Wider Gamut Color */
-        }
-        
-        /* :has() */
-        h3:has(+ p) {
-            color: purple;
-            margin-bottom: 0;
-        }
-
-        .inline-block {
-            display: inline-block;
-            background-color: lightcoral;
+        /* style property example */
+        details {
+            background-color: lightyellow;
             padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .inline {
-            display:inline;
-            background-color: aliceblue;
-            padding: 2px;
-            margin-bottom: 4px;
-        }
-
-        /* General sibling combinator */
-        h2 ~ h3 {
-            background-color: lightcyan;
-        }
-
-        /* Adjacent sibling combinator */
-        h2 + h3 {
-            font-style: italic;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .box {
-            background-color: #567895;
-            padding-top: 30px; /* Long padding-top */
-            padding-bottom: 30px; /* Long padding-bottom */
-            padding-left: 15px; /* Long padding-left */
-            padding-right: 15px; /* Long padding-right */
-            padding: 30px 15px 30px 15px; /* Short padding */
-            max-width: fit-content;
-            max-height: fit-content;
-        }
-
-        span {
-            background-color: rgb(255 255 255 / 50%);
-        }
-
-        body {
-            font-size: 1.2em; /* Relative font size + 3rd relative unit*/
-            line-height: 1.5em; /* Relative line height */
-        }
-
-        /* Combining 2 Selectors */
-        p.a{
-            text-align: center;
-            color: cornflowerblue;
-            text-decoration:underline ;
-        }
-
-        /* Nested Selector */
-        .container p{
-            color: blue;
-        }
-
-        header {
-            position: relative; /* Relative positioning */
-        }
-
-        /* Child Combinator */
-        .button-container > button {
-            position: fixed;
-            bottom: 10px; /* Adjust as needed */
-            right: 10px; /* Adjust as needed */
-            z-index: 999; /* Ensure it's above other content */
-            background-color: orange;
-        }
-
-        /* Pseudo-class Selector */
-        a:link {
-            color: blue; /* Default color for links */
-            text-decoration: none; /* Remove underline */
-        }
-
-        a:hover {
-            color: red; /* Change color on hover */
-        }
-
-        a:active {
-            color: green; /* Change color on click */
-        }
-
-        @media screen and (max-width: 768px) {
-            main {
-                padding: 0 10px; /* Adjust padding for smaller screens */
-            }
-
-            section {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns for smaller screens */
-            }
-
-            h1 {
-                width: 100%; /* Make the heading full width on smaller screens */
-                margin: 0; /* Remove margins to maximize space */
-            }
-
-            h2 {
-                padding: 15px; /* Adjust padding for smaller screens */
-            }
-
-            h3 {
-                margin: 10px; /* Adjust margin for smaller screens */
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            h1 {
-                font-size: 1.5em; /* Adjust font size for smaller screens */
-            }
+            border: 2px solid orange;
+            border-radius: 5px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -368,10 +153,12 @@
     <h2 class="source-sans-3">Additional Feedback for next meeting</h2>
     <div class = "inline-block">
         <p>Please enter your name and email: </p>
-        <form method="get" class="form-example">
+
+        <!-- inline style example -->
+        <form method="get" class="form-example" style="background-color: lightpink; padding: 20px;">
             <label for="name">Enter your name: </label>
             <input type="text" name="name" id="name" required /> <br>
-
+        
             <label for="email">Enter your email: </label>
             <input type="email" name="email" id="email" required />
         </form>
