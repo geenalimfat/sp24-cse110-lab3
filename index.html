@@ -14,7 +14,7 @@
 
 
     <style>
-        .source-sans-3 {
+        .source-sans-3 { /* Class Selector*/
             font-family: "Source Sans 3", sans-serif;
             font-optical-sizing: auto;
             font-weight: 700; /* Replace <weight> with the desired font weight */
@@ -22,6 +22,8 @@
         }
     </style>
     <style>
+
+        /* Element Selector */
      
         main {
             display: flex;
@@ -66,6 +68,11 @@
             
         }
 
+        /* Descendant combinator */
+        main h2 {
+            color: darkolivegreen;
+        }
+
         h3 {
             background-color: color-mix(blend red 30%, blue 35%); /* Wider Gamut Color */
             color: rgb(31, 1, 51);
@@ -76,12 +83,33 @@
             border-width: 0.5vw; /* 2nd relative unit */
             border-radius: 0.1vw;
         }
+
+         /* Attribute Selector */
+         input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Universal Selector */
+        * {
+            font-weight: normal;
+            color: black;
+        }
+
+        /* ID selector */
+        #bold-red {
+            font-weight: bold;
+             color: red;
+        }
         
         /* Fallback */
         :root {
             --header-color: #32055c; /* hex color */
         }
 
+        /* Selector List */
         h3, h4 {
             color: var(--header-color, rgb(5, 27, 85)); 
             /* Use variable with fallback */
@@ -89,6 +117,12 @@
 
         h4 {
             color: color(display-p3 1 0 0); /* Wider Gamut Color */
+        }
+        
+        /* :has() */
+        h3:has(+ p) {
+            color: purple;
+            margin-bottom: 0;
         }
 
         .inline-block {
@@ -105,6 +139,17 @@
             margin: bottom 4px;
         }
 
+        /* General sibling combinator */
+        h2 ~ h3 {
+            background-color: lightcyan;
+        }
+
+        /* Adjacent sibling combinator */
+        h2 + h3 {
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
         .box {
             background-color: #567895;
@@ -126,24 +171,32 @@
             line-height: 1.5em; /* Relative line height */
         }
 
+        /* Combining 2 Selectors */
         p.a{
             text-align: center;
             color: cornflowerblue;
             text-decoration:underline ;
         }
 
+        /* Nested Selector */
+        .container p{
+            color: blue;
+        }
+
         header {
             position: relative; /* Relative positioning */
         }
 
-        .button-container {
+        /* Child Combinator */
+        .button-container > button {
             position: fixed;
             bottom: 10px; /* Adjust as needed */
             right: 10px; /* Adjust as needed */
             z-index: 999; /* Ensure it's above other content */
+            background-color: orange;
         }
 
-        /* Pseudo-classes */
+        /* Pseudo-class Selector */
         a:link {
             color: blue; /* Default color for links */
             text-decoration: none; /* Remove underline */
@@ -203,7 +256,7 @@
             <h3 class="source-sans-3">Attendance:</h3>
             <h4 class="source-sans-3">Present: </h4>
             <ul>
-                <li>Geena Limfat</li>
+                <li><b>Geena Limfat</b></li>
                 <li>Nicole Cheng</li>
                 <li>Katelyn La</li>
             </ul>
@@ -229,7 +282,7 @@
         <p>Get to know the group</p>
 
    
-            <div>
+            <div class="container">
                 <h3 class="source-sans-3">New Business:</h3>
                 <ul>
                     <li>Funny Animal Videos</li>
@@ -238,7 +291,7 @@
                 </ul>
                 <p>Selected idea:<br>
                     <strong>Funny Animal Videos</strong><br>
-                    Everyone likes funny animal videos. Notable favorites include <span>cats, dogs, monkeys, seals, etc,. </span>
+                    Everyone likes funny animal videos. Notable favorites include <span id="bold-red">cats, dogs, monkeys, seals, etc,. </span>
                     Personal favorite: <b>dog</b>. Potentially add a comical animal poem as group slogan.
                     Potentially add an animal riddle in between slides.
                     Groupmates <em>stressed</em> that snacks should be brought to meetings. Noted.
@@ -300,12 +353,14 @@
     <section>
         Animal riddle: <br>
         <details>
-            <summary>I'm not a fish, but I'm quite the catch,
+            <summary>
+                I'm not a fish, but I'm quite the catch,
                 With my slimy skin and a wobbly match.
                 I slurp and burp, a real gourmet treat,
                 But beware, my kiss might leave you beat.
-                What am I?</summary>
-            <b>Frog</b>
+                What am I?
+            </summary>
+            <span id="bold-red">Frog</span>
         </details>
     </section>
 
